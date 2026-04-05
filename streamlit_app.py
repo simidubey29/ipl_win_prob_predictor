@@ -1,4 +1,7 @@
 import streamlit as st
+
+st.set_page_config(page_title="IPL Win Predictor", layout="centered")
+st.title("IPL Predictor")   
 import pickle
 import numpy as np
 
@@ -17,7 +20,7 @@ model = load_model()
 # =========================
 # PAGE CONFIG
 # =========================
-st.set_page_config(page_title="IPL Win Predictor", layout="centered")
+
 
 # =========================
 # TITLE
