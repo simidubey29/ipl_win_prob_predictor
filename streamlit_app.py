@@ -152,3 +152,9 @@ if st.button("🔮 Predict Win Probability"):
         if inning == "2nd Innings":
             st.write(f"Runs Left: {runs_left}")
             st.write(f"Required Run Rate (RRR): {round(rrr, 2)}")
+
+st.markdown("---")
+st.markdown(
+    "<h4 style='text-align: center;'>✨ Built with ❤️ by <b>Simi Dubey</b></h4>",
+    unsafe_allow_html=True
+)
