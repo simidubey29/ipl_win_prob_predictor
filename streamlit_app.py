@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 st.set_page_config(page_title="IPL Win Predictor", layout="centered")
 st.title("IPL Predictor")   
@@ -32,16 +33,13 @@ st.markdown("---")
 # =========================
 # TEAM SELECTION
 # =========================
-teams = [
-    "Chennai Super Kings",
-    "Mumbai Indians",
-    "Royal Challengers Bangalore",
-    "Kolkata Knight Riders",
-    "Delhi Capitals",
-    "Sunrisers Hyderabad",
-    "Rajasthan Royals",
-    "Punjab Kings"
-]
+matches = pd.read_csv("data/matches.csv")
+
+teams = sorted(list(set(
+    matches['team1'].dropna().unique()
+).union(set(
+    matches['team2'].dropna().unique()
+))))
 
 col1, col2 = st.columns(2)
 
